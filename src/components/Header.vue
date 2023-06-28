@@ -9,6 +9,10 @@ function navigate(nav: string) {
   url.value.hash = nav;
 }
 
+if (url.value.hash.length < 1) {
+  url.value.hash = navigation[0];
+}
+
 defineExpose({ url });
 </script>
 

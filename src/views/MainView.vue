@@ -13,8 +13,6 @@ const url = new URL(window.location.href);
 const headerRef = ref();
 const width = screen.width;
 
-console.log(width);
-
 const isScreenSmall = (width: number) => {
   if (width >= 1024) return false;
   return true;

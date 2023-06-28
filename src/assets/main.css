@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-white;
+  }
+  header {
+    @apply lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24;
+  }
+  main {
+    @apply pt-24 lg:w-1/2 lg:py-24;
+  }
+  section {
+    @apply space-y-4;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  p {
+    @apply text-white/60;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto min-h-screen max-w-screen-xl py-12 px-6;
+    @apply md:px-12 md:py-20;
+    @apply lg:px-24 lg:py-0;
+  }
+  .nav {
+    @apply hidden;
+    @apply lg:block lg:py-12;
+  }
+  .nav-link {
+    @apply transition pl-2 w-fit block brightness-75 font-bold text-sm tracking-widest uppercase text-accent -translate-x-2;
+    @apply hover:brightness-110 hover:translate-x-0;
+    @apply outline-none;
+  }
+  .nav-link.active {
+    @apply brightness-110 border-l-2 border-accent translate-x-0;
+  }
+
+  .section-header {
+    @apply pl-2 mb-8 font-bold text-sm tracking-widest uppercase text-accent;
+    @apply brightness-110 border-l-2 border-accent;
+  }
+
+  .btn {
+    @apply transition px-4 py-3 font-bold capitalize;
+    @apply hover:brightness-110;
+  }
+  .btn.primary {
+    @apply bg-accent text-primary border-2 border-accent;
+  }
+  .btn.secondary {
+    @apply bg-primary text-accent border-2 border-accent;
+  }
+}

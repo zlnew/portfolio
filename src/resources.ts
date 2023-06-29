@@ -30,7 +30,7 @@ interface Projects {
     github?: string;
     npm?: string;
   };
-  image?: any;
+  image?: string;
 }
 
 const me: Me = {
@@ -135,8 +135,8 @@ const projects: Projects[] = [
 ];
 
 function createUrl(fileName: string) {
-  const basePath = '/src/assets/';
-  const newUrl = new URL(basePath + fileName, import.meta.url);
+  const basePath = '/';
+  const newUrl = new URL(basePath + fileName, import.meta.url).href;
   return newUrl;
 }
 

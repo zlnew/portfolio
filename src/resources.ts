@@ -26,6 +26,10 @@ interface Projects {
   year: string;
   tech: string[];
   url?: string;
+  download?: {
+    github?: string;
+    npm?: string;
+  };
   image?: string;
 }
 
@@ -99,21 +103,34 @@ const projects: Projects[] = [
     description: 'A Music Discovery Web App Powered by the Spotify Web API that recommends various tracks generated based on user-selected vibes.',
     year: '2023',
     tech: ['Vue.js', 'Typescript', 'Tailwind CSS', 'Spotify Web API', 'Netlify'],
+    download: {
+      github: 'https://github.com/zlnew/vibes-in-spotify',
+    },
     url: 'https://vibes-in.netlify.app/',
+    image: 'src/assets/vibes-in.png',
   },
   {
     name: 'Ease Button UI',
     description: 'A user-friendly and customizable button UI component for Vue.js, designed to simplify its usage for users.',
     year: '2023',
     tech: ['Vue.js', 'Typescript', 'Tailwind CSS', 'Netlify'],
+    download: {
+      github: 'https://github.com/zlnew/ease-button-ui',
+      npm: 'https://www.npmjs.com/package/ease-button-ui',
+    },
     url: 'https://ease-button-ui.netlify.app/',
+    image: 'src/assets/ease-button-ui.png',
   },
   {
     name: 'E-Commerce Website',
     description: 'An Office Stationery E-Commerce website built using CodeIgniter and integrated with the Midtrans Payment Gateway.',
     year: '2021',
     tech: ['CodeIgniter', 'JQuery', 'Bootstrap', 'Midtrans API'],
+    download: {
+      github: 'https://github.com/ishamadway/toko-atk',
+    },
     url: 'https://github.com/ishamadway/toko-atk',
+    image: 'src/assets/toko-atk.png',
   }
 ];
 

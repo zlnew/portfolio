@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { experience } from '@/resources';
-import LinkIcon from '@/icons/Link.vue';
 
 function toUrl(url: string | undefined): void {
   if (url) {
@@ -19,12 +18,12 @@ function toUrl(url: string | undefined): void {
           <p class="pt-1 section-content-period">{{ exp.period.from }} - {{ exp.period.to }}</p>
         </div>
         <div class="col-span-3 space-y-3">
-          <h5 class="section-content-header">{{ exp.title }} - {{ exp.company }}</h5>
+          <h5 class="section-content-header">{{ exp.title }} - {{ exp.company }} <fa-icon icon="fa-solid fa-arrow-up-right-from-square" size="xs" class="section-content-link hidden ml-2" /></h5>
           <p class="section-content-desc"> {{ exp.description }}</p>
           <div class="flex flex-wrap gap-4" v-if="exp.projects">
             <span v-for="project in exp.projects">
               <a :href="project.url" target="_blank" class="section-content-project">
-                <link-icon /> {{ project.name }}
+                <fa-icon icon="fa-solid fa-paperclip" class="mr-1" /> {{ project.name }}
               </a>
             </span>
           </div>

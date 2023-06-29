@@ -1,20 +1,39 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
+import Social from './Social.vue';
 import { me } from '@/resources';
 
-const url = ref(new URL(window.location.href));
 const navigation = ['about', 'experience', 'projects'];
+const activeContentId = ref<any>('about');
 
-function navigate(nav: string) {
-  url.value = new URL(window.location.href);
-  url.value.hash = nav;
-}
+onMounted(() => {
+  const handleScroll = () => {
+    const contentSections = document.querySelectorAll('section');
+    const scrollPosition = window.scrollY;
 
-if (url.value.hash.length < 1) {
-  url.value.hash = navigation[0];
-}
+    for (const section of contentSections) {
+      if (section instanceof HTMLElement) {
+        const sectionOffsetTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+  
+        if (
+          scrollPosition >= sectionOffsetTop &&
+          scrollPosition < sectionOffsetTop + sectionHeight
+        ) {
+          activeContentId.value = sectionId;
+          break;
+        }
+      }
+    }
+  };
 
-defineExpose({ url });
+  window.addEventListener('scroll', handleScroll);
+
+  onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
+  });
+});
 </script>
 
 <template>
@@ -27,10 +46,9 @@ defineExpose({ url });
         <ul class="space-y-6">
           <li v-for="nav in navigation" :key="nav">
             <a
-              @click="navigate(nav)"
               class="nav-link"
               :href="`#${nav}`"
-              :class="{active: url.hash == `#${nav}`}"
+              :class="{active: activeContentId == `${nav}`}"
               >{{ nav }}
             </a>
           </li>
@@ -38,8 +56,8 @@ defineExpose({ url });
       </nav>
     </div>
 
-    <div>
-      Social Media
+    <div class="space-x-4">
+      <Social />
     </div>
   </header>
 </template>

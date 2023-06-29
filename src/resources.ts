@@ -30,7 +30,7 @@ interface Projects {
     github?: string;
     npm?: string;
   };
-  image?: string;
+  image?: any;
 }
 
 const me: Me = {
@@ -107,7 +107,7 @@ const projects: Projects[] = [
       github: 'https://github.com/zlnew/vibes-in-spotify',
     },
     url: 'https://vibes-in.netlify.app/',
-    image: 'src/assets/vibes-in.png',
+    image: createUrl('vibes-in.png'),
   },
   {
     name: 'Ease Button UI',
@@ -119,7 +119,7 @@ const projects: Projects[] = [
       npm: 'https://www.npmjs.com/package/ease-button-ui',
     },
     url: 'https://ease-button-ui.netlify.app/',
-    image: 'src/assets/ease-button-ui.png',
+    image: createUrl('ease-button-ui.png'),
   },
   {
     name: 'E-Commerce Website',
@@ -130,9 +130,15 @@ const projects: Projects[] = [
       github: 'https://github.com/ishamadway/toko-atk',
     },
     url: 'https://github.com/ishamadway/toko-atk',
-    image: 'src/assets/toko-atk.png',
+    image: createUrl('toko-atk.png'),
   }
 ];
+
+function createUrl(fileName: string) {
+  const basePath = '/src/assets/';
+  const newUrl = new URL(basePath + fileName, import.meta.url);
+  return newUrl;
+}
 
 export {
   me,

@@ -15,11 +15,18 @@
   section {
     @apply space-y-4;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6 {
     @apply font-bold;
   }
+  h1 {
+    @apply font-serif text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-accent to-cyan-400;
+  }
   p {
-    @apply text-white/60;
+    @apply text-white/70;
+  }
+  a:not(.section-content, .section-content-project, .nav-link, .section-header) {
+    @apply transition brightness-110 hover:brightness-125;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent via-cyan-200 to-cyan-50;
   }
 }
 
@@ -40,11 +47,34 @@
   }
   .nav-link.active {
     @apply brightness-110 border-l-2 border-accent translate-x-0;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent via-cyan-200 to-cyan-50
   }
 
   .section-header {
-    @apply pl-2 mb-8 font-bold text-sm tracking-widest uppercase text-accent;
+    @apply pl-2 mb-12 font-bold text-sm tracking-widest uppercase;
     @apply brightness-110 border-l-2 border-accent;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-accent via-cyan-200 to-cyan-50
+  }
+
+  .section-content {
+    @apply transition p-4 scale-x-110 cursor-pointer hover:bg-accent/5;
+    @apply sm:scale-x-[1.065] lg:grid lg:grid-cols-4;
+  }
+  .section-content-period {
+    @apply text-xs uppercase font-medium tracking-widest;
+  }
+  .section-content.header {
+    @apply font-medium tracking-wide brightness-110 text-accent;
+  }
+  .section-content-desc {
+    @apply text-sm font-thin;
+  }
+  .section-content-project {
+    @apply text-xs font-thin text-accent brightness-110;
+    @apply hover:brightness-125 hover:underline;
+  }
+  .section-content-badge {
+    @apply px-3 py-2 text-xs text-white/90 bg-accent/5 shadow-inner;
   }
 
   .btn {
@@ -56,5 +86,14 @@
   }
   .btn.secondary {
     @apply bg-primary text-accent border-2 border-accent;
+  }
+  
+  .humbleicons {
+    width: 1.2em;
+    height: 1.2em;
+    display: inline-block;
+    align-self: center;
+    vertical-align: middle;
+    margin-top: -0.1em;
   }
 }

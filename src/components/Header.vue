@@ -20,7 +20,7 @@ defineExpose({ url });
 <template>
   <header class="space-y-4">
     <div>
-      <h1 class="mb-2 text-4xl lg:text-4xl xl:text-5xl">{{ me.name }}</h1>
+      <h1 class="mb-2 text-4xl lg:text-5xl xl:text-5xl">{{ me.name }}</h1>
       <h2 class="mb-6 font-medium text-xl lg:text-xl">{{ me.title }}</h2>
       <p class="mb-4 max-w-sm">{{ me.short_bio }}</p>
       <nav class="nav">

@@ -15,11 +15,11 @@
   section {
     @apply space-y-4;
   }
-  h2, h3, h4, h5, h6 {
+  h3, h4, h5, h6 {
     @apply font-bold;
   }
-  h1 {
-    @apply font-serif text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-accent to-cyan-400;
+  h1, h2 {
+    @apply font-serif text-accent brightness-110;
   }
   p {
     @apply text-white/70;

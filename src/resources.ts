@@ -136,8 +136,7 @@ const projects: Projects[] = [
 
 function createUrl(fileName: string) {
   const basePath = '/';
-  const newUrl = new URL(basePath + fileName, import.meta.url).href;
-  return newUrl;
+  return  new URL(basePath + fileName, import.meta.url).href;
 }
 
 export {

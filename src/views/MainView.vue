@@ -9,7 +9,7 @@ import Contact from '@/components/Contact.vue';
 <template>
   <div class="container">
     <div class="lg:flex lg:justify-between lg:gap-4">
-      <Header ref="headerRef" />
+      <Header />
       <main>
         <div class="space-y-24">
           <About />

@@ -35,14 +35,3 @@ function toUrl(url: string | undefined): void {
     </div>
   </section>
 </template>
-
-<style>
-.humbleicons {
-	width: 1.2em;
-	height: 1.2em;
-	display: inline-block;
-	align-self: center;
-	vertical-align: middle;
-	margin-top: -0.1em;
-}
-</style>

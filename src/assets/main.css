@@ -89,13 +89,4 @@
   .icon {
     @apply transition text-accent opacity-60 hover:brightness-110 hover:opacity-100;
   }
-  
-  .humbleicons {
-    width: 1.2em;
-    height: 1.2em;
-    display: inline-block;
-    align-self: center;
-    vertical-align: middle;
-    margin-top: -0.1em;
-  }
 }

@@ -8,7 +8,7 @@
           <td>Email</td>
           <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
           <td>
-            <a href="mailto:aprizqy.work@gmail.com">maulana4pz@gmail.com</a>
+            <a href="mailto:aprizqy.work@gmail.com">aprizqy.work@gmail.com</a>
           </td>
         </tr>
         <tr>

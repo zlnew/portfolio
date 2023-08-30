@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { projects } from '@/resources';
+import { projects } from '@/resources'
 
-function toUrl(url: string | undefined): void {
-  if (url) {
-    window.open(url, '_blank');
+function toUrl (url: string | undefined): void {
+  if (url !== undefined) {
+    window.open(url, '_blank')
   }
 }
 </script>
@@ -21,14 +21,14 @@ function toUrl(url: string | undefined): void {
           <h5 class="section-content-header">{{ project.name }} <fa-icon icon="fa-solid fa-arrow-up-right-from-square" size="xs" class="section-content-link hidden ml-2" /></h5>
           <p class="section-content-desc"> {{ project.description }}</p>
           <div class="flex flex-wrap gap-4" v-if="project.download">
-            <span v-for="(url, place) in project.download">
+            <span v-for="(url, place) in project.download" :key="url">
               <a :href="url" target="_blank" class="section-content-project capitalize">
                 <fa-icon :icon="`fa-brands fa-${place}`" class="mr-1" /> {{ place }}
               </a>
             </span>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="section-content-badge" v-for="tech in project.tech">{{ tech }}</span>
+            <span class="section-content-badge" v-for="tech in project.tech" :key="tech">{{ tech }}</span>
           </div>
         </div>
       </div>

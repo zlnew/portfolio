@@ -1,39 +1,39 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue';
-import Social from './Social.vue';
-import { me } from '@/resources';
+import { onMounted, onUnmounted, ref } from 'vue'
+import Social from './Social.vue'
+import { me } from '@/resources'
 
-const navigation = ['about', 'experience', 'projects'];
-const activeContentId = ref<any>('about');
+const navigation = ['about', 'experience', 'projects']
+const activeContentId = ref<any>('about')
 
 onMounted(() => {
   const handleScroll = () => {
-    const contentSections = document.querySelectorAll('section');
-    const scrollPosition = window.scrollY;
+    const contentSections = document.querySelectorAll('section')
+    const scrollPosition = window.scrollY
 
     for (const section of contentSections) {
       if (section instanceof HTMLElement) {
-        const sectionOffsetTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
-  
+        const sectionOffsetTop = section.offsetTop
+        const sectionHeight = section.offsetHeight
+        const sectionId = section.getAttribute('id')
+
         if (
           scrollPosition >= sectionOffsetTop &&
           scrollPosition < sectionOffsetTop + sectionHeight
         ) {
-          activeContentId.value = sectionId;
-          break;
+          activeContentId.value = sectionId
+          break
         }
       }
     }
-  };
+  }
 
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', handleScroll)
 
   onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll);
-  });
-});
+    window.removeEventListener('scroll', handleScroll)
+  })
+})
 </script>
 
 <template>
@@ -42,6 +42,21 @@ onMounted(() => {
       <h1 class="mb-2 text-4xl lg:text-5xl xl:text-5xl">{{ me.name }}</h1>
       <h2 class="mb-6 font-medium text-xl lg:text-xl">{{ me.title }}</h2>
       <p class="mb-4 max-w-sm">{{ me.short_bio }}</p>
+
+      <div>
+        <a
+          href="/resume/Maulana Aprizqy Sumaryanto's Resume.pdf"
+          target="_blank"
+          class="icon"
+        >
+          <fa-icon
+            icon="fa-solid fa-download"
+            class="me-2"
+          />
+          Resume
+        </a>
+      </div>
+
       <nav class="nav">
         <ul class="space-y-6">
           <li v-for="nav in navigation" :key="nav">

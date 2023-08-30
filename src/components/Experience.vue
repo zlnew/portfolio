@@ -10,7 +10,7 @@ function toUrl (url: string | undefined): void {
 
 <template>
   <section id="experience">
-    <h5 class="section-header">Experience</h5>
+    <h3 class="section-header">Experience</h3>
 
     <div class="space-y-10">
       <div class="section-content" v-for="exp in experience" :key="exp.title" @click="toUrl(exp.url)">
@@ -18,7 +18,7 @@ function toUrl (url: string | undefined): void {
           <p class="pt-1 section-content-period">{{ exp.period.from }} - {{ exp.period.to }}</p>
         </div>
         <div class="col-span-3 space-y-3">
-          <h5 class="section-content-header">{{ exp.title }} - {{ exp.company }} <fa-icon icon="fa-solid fa-arrow-up-right-from-square" size="xs" class="section-content-link hidden ml-2" /></h5>
+          <h4 class="section-content-header">{{ exp.title }} - {{ exp.company }} <fa-icon icon="fa-solid fa-arrow-up-right-from-square" size="xs" class="section-content-link hidden ml-2" /></h4>
           <p class="section-content-desc"> {{ exp.description }}</p>
           <div class="flex flex-wrap gap-4" v-if="exp.projects">
             <span v-for="project in exp.projects" :key="project.url">

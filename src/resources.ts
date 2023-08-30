@@ -104,7 +104,7 @@ const projects: Projects[] = [
     year: '2021',
     tech: ['Vue.js', 'Typescript', 'Quasar UI', 'reCaptcha'],
     url: 'https://eijazah.bisniskoe.com/',
-    image: createUrl('projects/e-ijazah.png')
+    image: createUrl('projects/e-ijazah.webp')
   },
   {
     name: 'Spotify Music Discovery App',
@@ -115,7 +115,7 @@ const projects: Projects[] = [
       github: 'https://github.com/zlnew/vibes-in-spotify'
     },
     url: 'https://vibes-in.netlify.app/',
-    image: createUrl('projects/vibes-in.png')
+    image: createUrl('projects/vibes-in.webp')
   },
   {
     name: 'Ease Button UI',
@@ -127,7 +127,7 @@ const projects: Projects[] = [
       npm: 'https://www.npmjs.com/package/ease-button-ui'
     },
     url: 'https://ease-button-ui.netlify.app/',
-    image: createUrl('projects/ease-button-ui.png')
+    image: createUrl('projects/ease-button-ui.webp')
   },
   {
     name: 'E-Commerce Website',
@@ -138,7 +138,7 @@ const projects: Projects[] = [
       github: 'https://github.com/ishamadway/toko-atk'
     },
     url: 'https://github.com/ishamadway/toko-atk',
-    image: createUrl('projects/toko-atk.png')
+    image: createUrl('projects/toko-atk.webp')
   }
 ]
 

@@ -1,6 +1,6 @@
 <template>
   <section id="contact">
-    <h5 class="section-header">Get in touch!</h5>
+    <h3 class="section-header">Get in touch!</h3>
     <p>Thank you for your interest in getting in touch! I'm excited to hear from you and discuss potential collaborations, opportunities, or answer any questions you may have. Feel free to reach out to me.</p>
     <div class="space-y-1">
       <table>

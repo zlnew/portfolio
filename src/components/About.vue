@@ -4,7 +4,7 @@ import { about } from '@/resources'
 
 <template>
   <section id="about">
-    <h5 class="section-header">About</h5>
+    <h3 class="section-header">About</h3>
     <p v-for="text in about" :key="text" v-html="text" />
   </section>
 </template>

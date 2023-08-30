@@ -55,7 +55,7 @@ const experience: Experience[] = [
       to: 'Present'
     },
     location: 'Online',
-    tech: ['Vue.js', 'Tailwind CSS', 'Typescript', 'CodeIgniter', 'Laravel', 'MySQL'],
+    tech: ['Vue.js', 'Tailwind CSS', 'Quasar UI', 'Typescript', 'CodeIgniter', 'Laravel', 'MySQL'],
     projects: [
       {
         name: 'E-KTM',

@@ -1,34 +1,54 @@
 <script setup lang="ts">
 import { experience } from '@/resources'
-
-function toUrl (url: string | undefined): void {
-  if (url !== undefined) {
-    window.open(url, '_blank')
-  }
-}
+import SectionHeader from './SectionHeader.vue'
+import Badge from './Badge.vue'
 </script>
 
 <template>
-  <section id="experience">
-    <h3 class="section-header">Experience</h3>
+  <section id="experience" class="space-y-8">
+    <SectionHeader id="experience">Experience</SectionHeader>
 
-    <div class="space-y-10">
-      <div class="section-content" v-for="exp in experience" :key="exp.title" @click="toUrl(exp.url)">
-        <div class="mb-4 lg:mb-0">
-          <p class="pt-1 section-content-period">{{ exp.period.from }} - {{ exp.period.to }}</p>
-        </div>
+    <div class="space-y-8">
+      <div
+        v-for="exp in experience"
+        :key="exp.title"
+        class="grid grid-cols-4 gap-4"
+      >
+        <span class="text-xs md:text-sm tracking-widest text-light">
+          {{ exp.period.from }} - {{ exp.period.to }}
+        </span>
+
         <div class="col-span-3 space-y-3">
-          <h4 class="section-content-header">{{ exp.title }} - {{ exp.company }} <fa-icon icon="fa-solid fa-arrow-up-right-from-square" size="xs" class="section-content-link hidden ml-2" /></h4>
-          <p class="section-content-desc"> {{ exp.description }}</p>
-          <div class="flex flex-wrap gap-4" v-if="exp.projects">
-            <span v-for="project in exp.projects" :key="project.url">
-              <a :href="project.url" target="_blank" class="section-content-project">
-                <fa-icon icon="fa-solid fa-paperclip" class="mr-1" /> {{ project.name }}
+          <a v-if="exp.url" :href="exp.url" target="_blank">
+            <h4>
+              {{ exp.title }} · {{ exp.company }}
+            </h4>
+          </a>
+
+          <h4 v-else>
+            {{ exp.title }} · {{ exp.company }}
+          </h4>
+
+          <p class="text-light text-sm md:text-base">
+            {{ exp.description }}
+          </p>
+
+          <div class="flex flex-wrap gap-2" v-if="exp.projects">
+            <span v-for="project in exp.projects" :key="project.url" class="text-sm">
+              <a :href="project.url" target="_blank" class="transition hover:text-accent hover:no-underline">
+                <fa-icon icon="fa-solid fa-paperclip" />
+                {{ project.name }}
               </a>
             </span>
           </div>
+
           <div class="flex flex-wrap gap-2">
-            <span class="section-content-badge" v-for="tech in exp.tech" :key="tech">{{ tech }}</span>
+            <Badge
+              v-for="tech in exp.tech"
+              :key="tech"
+            >
+              {{ tech }}
+            </Badge>
           </div>
         </div>
       </div>

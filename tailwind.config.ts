@@ -6,15 +6,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Lato'],
-      serif: ['Playfair Display'],
+      sans: ['Roboto'],
+      serif: ['"Roboto Slab"'],
     },
     extend: {
       colors: {
-        primary: 'hsl(200, 32%, 10%)',
-        secondary: 'hsl(204, 77%, 26%)',
-        tertiary: 'hsl(204, 57%, 46%)',
-        accent: 'hsl(204, 86%, 86%)',
+        primary: '#0a0a0a',
+        accent: '#4ade80',
+        light: '#d4d4d4'
       },
     },
   },

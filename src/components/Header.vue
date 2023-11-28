@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
-import Social from './Social.vue'
+import Socials from './Socials.vue'
+import Badge from './Badge.vue'
 import { me } from '@/resources'
 
 const navigation = ['about', 'experience', 'projects']
@@ -37,42 +38,63 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="space-y-4">
-    <div>
-      <h1 class="mb-2 text-4xl lg:text-5xl xl:text-5xl">{{ me.name }}</h1>
-      <h2 class="mb-6 font-medium text-xl lg:text-xl">{{ me.title }}</h2>
-      <p class="mb-4 max-w-sm">{{ me.short_bio }}</p>
+  <header class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 space-y-4">
+    <div class="mb-8 lg:mb-0">
+      <h1 class="mb-2 text-4xl">
+        {{ me.name }}
+      </h1>
 
-      <div>
+      <h2 class="transition text-light mb-6 tracking-widest hover:text-accent">
+        {{ me.title }}
+      </h2>
+
+      <p class="text-light mb-6 max-w-sm">
+        {{ me.short_bio }}
+      </p>
+
+      <div class="flex gap-2">
         <a
           href="/resume/Maulana Aprizqy Sumaryanto's Resume.pdf"
           target="_blank"
-          class="icon"
+          class="hover:no-underline"
+          title="Download Resume"
         >
-          <fa-icon
-            icon="fa-solid fa-download"
-            class="me-2"
-          />
-          Resume
+          <Badge size="lg">
+            Resume
+            <fa-icon icon="fa-solid fa-download" size="sm" />
+          </Badge>
+        </a>
+        <a
+          href="https://aprizqy.com/"
+          target="_blank"
+          class="hover:no-underline"
+          title="Aprizqy's Blog"
+        >
+          <Badge size="lg">
+            Blog
+            <fa-icon icon="fa-solid fa-arrow-up-right-from-square" size="sm" />
+          </Badge>
         </a>
       </div>
 
-      <nav class="nav">
+      <nav class="hidden lg:block lg:py-12">
         <ul class="space-y-6">
           <li v-for="nav in navigation" :key="nav">
             <a
-              class="nav-link"
               :href="`#${nav}`"
-              :class="{active: activeContentId == `${nav}`}"
-              >{{ nav }}
+              :class="{
+                'font-bold border-l-2 border-accent pl-2': activeContentId === `${nav}`,
+                'font-medium opacity-60 hover:opacity-100': activeContentId !== `${nav}`
+              }"
+              class="transition font-serif uppercase hover:no-underline"
+            >
+              {{ nav }}
             </a>
           </li>
         </ul>
       </nav>
     </div>
 
-    <div class="space-x-4">
-      <Social />
-    </div>
+    <Socials />
   </header>
 </template>

@@ -36,13 +36,13 @@ interface Projects {
 const me: Me = {
   name: 'Maulana Aprizqy Sumaryanto',
   title: 'Freelance Full-Stack Developer',
-  short_bio: 'I enjoy transforming ideas into valuable websites for various purposes.'
+  short_bio: 'I love transforming ideas into valuable websites.'
 }
 
 const about: About = [
-  "Graduated from Software Engineering at Bina Sarana Informatika University. I currently work as a Freelance Full-Stack Developer. Web development is my true passion, and I find immense joy in creating websites that are not only innovative but also user-friendly. Over time, I've had wonderful opportunities to contribute to a variety of freelance projects as a Full Stack Developer.",
-  'Through my journey as a Freelance Full-Stack Developer, I have become well-versed in using technologies like Laravel, Vue.js, Typescript, and MySQL. Yet, despite my proficiency across full stack development, my heart lies in front-end development, an area that I am particularly drawn to and enthusiastic about.',
-  "In my free time, I enjoy dedicating my time to building <a href='https://github.com/zlnew/vibes-in-spotify' target='_blank' class='text-accent'>open-source projects</a>. I find great satisfaction in being able to share my projects with others and contribute to helping people through my websites."
+  "Graduated from <strong>Software Engineering at Bina Sarana Informatika University</strong>. I currently work as a Freelance Full-Stack Developer. Web development is my true passion, and I find immense joy in creating websites that are not only innovative but also user-friendly. Over time, I've had wonderful opportunities to contribute to a variety of freelance projects as a Full Stack Developer.",
+  'Through my journey as a Freelance Full-Stack Developer, I have become well-versed in using technologies like <strong>Laravel, Vue.js, Typescript, and MySQL</strong>. Yet, despite my proficiency across full stack development, my heart lies in <strong>front-end development</strong>, an area that I am particularly drawn to and enthusiastic about.',
+  "In my free time, I enjoy dedicating my time to building <a href='https://github.com/zlnew/vibes-in-spotify' target='_blank' class='link'>open-source projects</a> or write an article on my <a href='https://aprizqy.com/' target='_blank' class='link'>personal blog</a>. I find great satisfaction in being able to share my projects with others and contribute to helping people through my websites."
 ]
 
 const experience: Experience[] = [
@@ -59,7 +59,7 @@ const experience: Experience[] = [
     projects: [
       {
         name: 'E-Student Card',
-        url: 'https://ektm.mercusuar.ac.id/'
+        url: 'https://ektm.mercusuar.ac.id/login'
       },
       {
         name: 'Student Financial App',
@@ -93,7 +93,7 @@ const experience: Experience[] = [
     description: 'This is the first place where I learned and entered the world of programming. I had the opportunity to learn basic programming skills and graduated as a computer science bachelor.',
     period: {
       from: 'Aug 2019',
-      to: 'Aug 2023'
+      to: 'Dec 2023'
     },
     location: 'On site',
     tech: ['Basic programming'],
@@ -103,9 +103,20 @@ const experience: Experience[] = [
 
 const projects: Projects[] = [
   {
+    name: 'Personal Blog',
+    description: 'My personal blog, where I share coding tips, tutorials, and my thoughts. Built using Nuxt.js and Supabase.',
+    year: '2023',
+    tech: ['Nuxt.js', 'Typescript', 'Tailwind CSS', 'Supabase'],
+    download: {
+      github: 'https://github.com/zlnew/blog'
+    },
+    url: 'https://aprizqy.com/',
+    image: createUrl('projects/aprizqy-blog.webp')
+  },
+  {
     name: 'E-Ijazah App',
     description: 'An app that seamlessly verifies Ijazah authenticity via QR codes and facilitates application of certificate validation letter.',
-    year: '2021',
+    year: '2023',
     tech: ['Vue.js', 'Typescript', 'Quasar UI', 'reCaptcha'],
     url: 'https://eijazah.bisniskoe.com/',
     image: createUrl('projects/e-ijazah.webp')

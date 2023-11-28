@@ -7,10 +7,10 @@ import Contact from '@/components/Contact.vue'
 </script>
 
 <template>
-  <div class="container">
-    <div class="lg:flex lg:justify-between lg:gap-4">
+  <div class="mx-auto min-h-screen max-w-screen-xl py-12 px-6 md:px-12 md:py-20 lg:px-24 lg:py-0">
+    <div class="lg:flex lg:justify-between lg:gap-16">
       <Header />
-      <main>
+      <main class="pt-24 lg:w-1/2 lg:py-24">
         <div class="space-y-24">
           <About />
           <Experience />

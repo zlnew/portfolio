@@ -11,10 +11,10 @@ withDefaults(
 <template>
   <span
     :class="{
-      'px-1': size === 'md',
-      'px-2 py-1': size === 'lg'
+      'px-1 text-sm': size === 'md',
+      'px-2 py-1 text-base': size === 'lg'
     }"
-    class="transition text-sm font-medium tracking-wider rounded-sm bg-accent/80 text-primary hover:bg-accent"
+    class="transition font-medium tracking-wider rounded-sm bg-emerald-900 hover:bg-accent hover:text-primary"
   >
     <slot />
   </span>

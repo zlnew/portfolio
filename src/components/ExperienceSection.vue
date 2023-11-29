@@ -2,6 +2,7 @@
 import { experience } from '@/resources'
 import SectionHeader from './SectionHeader.vue'
 import Badge from './Badge.vue'
+import SectionSubheader from './SectionSubheader.vue'
 </script>
 
 <template>
@@ -19,15 +20,7 @@ import Badge from './Badge.vue'
         </span>
 
         <div class="col-span-3 space-y-3">
-          <a v-if="exp.url" :href="exp.url" target="_blank">
-            <h4>
-              {{ exp.title }} · {{ exp.company }}
-            </h4>
-          </a>
-
-          <h4 v-else>
-            {{ exp.title }} · {{ exp.company }}
-          </h4>
+          <SectionSubheader :text="exp.company" :url="exp.url" />
 
           <p class="text-light text-sm md:text-base">
             {{ exp.description }}

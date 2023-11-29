@@ -114,14 +114,6 @@ const projects: Projects[] = [
     image: createUrl('projects/aprizqy-blog.webp')
   },
   {
-    name: 'E-Ijazah App',
-    description: 'An app that seamlessly verifies Ijazah authenticity via QR codes and facilitates application of certificate validation letter.',
-    year: '2023',
-    tech: ['Vue.js', 'Typescript', 'Quasar UI', 'reCaptcha'],
-    url: 'https://eijazah.bisniskoe.com/',
-    image: createUrl('projects/e-ijazah.webp')
-  },
-  {
     name: 'Spotify Music Discovery App',
     description: 'A Music Discovery Web App Powered by the Spotify Web API that recommends various tracks generated based on user-selected vibes.',
     year: '2023',
@@ -131,6 +123,14 @@ const projects: Projects[] = [
     },
     url: 'https://vibes-in.netlify.app/',
     image: createUrl('projects/vibes-in.webp')
+  },
+  {
+    name: 'E-Ijazah App',
+    description: 'An app that seamlessly verifies Ijazah authenticity via QR codes and facilitates application of certificate validation letter.',
+    year: '2023',
+    tech: ['Vue.js', 'Typescript', 'Quasar UI', 'reCaptcha'],
+    url: 'https://eijazah.bisniskoe.com/',
+    image: createUrl('projects/e-ijazah.webp')
   },
   {
     name: 'Ease Button UI',

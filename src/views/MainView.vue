@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import Header from '@/components/Header.vue'
-import About from '@/components/About.vue'
-import Experience from '@/components/Experience.vue'
-import Projects from '@/components/Projects.vue'
-import Contact from '@/components/Contact.vue'
+import AboutSection from '@/components/AboutSection.vue'
+import ExperienceSection from '@/components/ExperienceSection.vue'
+import ProjectsSection from '@/components/ProjectsSection.vue'
+import ContactSection from '@/components/ContactSection.vue'
 </script>
 
 <template>
@@ -12,10 +12,10 @@ import Contact from '@/components/Contact.vue'
       <Header />
       <main class="pt-24 lg:w-1/2 lg:py-24">
         <div class="space-y-24">
-          <About />
-          <Experience />
-          <Projects />
-          <Contact />
+          <AboutSection />
+          <ExperienceSection/>
+          <ProjectsSection />
+          <ContactSection />
         </div>
       </main>
     </div>

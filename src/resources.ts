@@ -88,7 +88,7 @@ const experience: Experience[] = [
     url: 'https://beecons.co.id/'
   },
   {
-    title: 'Software Engineering Student',
+    title: 'Software Engineering',
     company: 'Bina Sarana Informatika University',
     description: 'This is the first place where I learned and entered the world of programming. I had the opportunity to learn basic programming skills and graduated as a computer science bachelor.',
     period: {

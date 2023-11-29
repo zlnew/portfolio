@@ -20,7 +20,7 @@ import SectionSubheader from './SectionSubheader.vue'
         </span>
 
         <div class="col-span-3 space-y-3">
-          <SectionSubheader :text="exp.company" :url="exp.url" />
+          <SectionSubheader :text="`${exp.title} · ${exp.company}`" :url="exp.url" />
 
           <p class="text-light text-sm md:text-base">
             {{ exp.description }}

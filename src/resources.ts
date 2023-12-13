@@ -49,7 +49,7 @@ const experience: Experience[] = [
   {
     title: 'Full-Stack Developer',
     company: 'Freelance',
-    description: 'Creating diverse websites for clients as an independent Full Stack Developer.',
+    description: 'Involved with several projects as a full-stack developer. In this job I gained experience on how to communicate well with clients and improved my skills in using Laravel, Vue.js, Typescript, and MySQL.',
     period: {
       from: '2021',
       to: 'Present'
@@ -76,9 +76,9 @@ const experience: Experience[] = [
     ]
   },
   {
-    title: 'Full Stack Developer Internship',
+    title: 'Front-End Developer Internship',
     company: 'Beecons',
-    description: 'Develop a marketplace website for Estimator.id that focuses on property sales and services in the construction field.',
+    description: 'Develop a marketplace website for Estimator.id in a team as a Front-End Developer. From this internship i was learned how to collaborate using git as a team and how to use and understands REST API.',
     period: {
       from: 'Aug',
       to: 'Dec 2022'

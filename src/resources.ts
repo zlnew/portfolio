@@ -31,6 +31,11 @@ interface Projects {
     npm?: string
   }
   image?: string
+  overview?: Array<{
+    src: string
+    title: string
+    description: string
+  }>
 }
 
 const me: Me = {
@@ -111,7 +116,29 @@ const projects: Projects[] = [
       github: 'https://github.com/zlnew/blog'
     },
     url: 'https://aprizqy.com/',
-    image: createUrl('projects/aprizqy-blog.webp')
+    image: createUrl('projects/aprizqy-blog.webp'),
+    overview: [
+      {
+        src: createUrl('projects/personal_blog/home.webp'),
+        title: 'Home',
+        description: 'This is the interface of the blog home page. This page shows the latest articles of the blog.'
+      },
+      {
+        src: createUrl('projects/personal_blog/browse.png'),
+        title: 'Browse',
+        description: 'This is the interface for browsing articles. You can search and filter articles based on order and tags.'
+      },
+      {
+        src: createUrl('projects/personal_blog/dashboard.png'),
+        title: 'Dashboard for writer',
+        description: 'Dashboard can be accessed if the user is logged in. The default dashboard page shows all the articles created by the writer.'
+      },
+      {
+        src: createUrl('projects/personal_blog/editor.png'),
+        title: 'Article Editor',
+        description: 'Writer can create and edit their articles, this blog uses Tiptap editor for content editing.'
+      }
+    ]
   },
   {
     name: 'Spotify Music Discovery App',
@@ -122,39 +149,73 @@ const projects: Projects[] = [
       github: 'https://github.com/zlnew/vibes-in-spotify'
     },
     url: 'https://vibes-in.netlify.app/',
-    image: createUrl('projects/vibes-in.webp')
+    image: createUrl('projects/vibes-in.webp'),
+    overview: [
+      {
+        src: createUrl('projects/vibes_in/vibe_selector.png'),
+        title: 'Choose Vibe',
+        description: 'Users can choose a Vibe. The vibes are Energetic, Melancholic, Relaxing, Upbeat, Uplifting, Love, and Thoughtful'
+      },
+      {
+        src: createUrl('projects/vibes_in/music_recommendation.webp'),
+        title: 'Song Recommendations',
+        description: 'This app will generate 20 songs based on user-selected vibes, all songs can be saved as a playlist.'
+      }
+    ]
   },
   {
     name: 'E-Ijazah App',
     description: 'An app that seamlessly verifies Ijazah authenticity via QR codes and facilitates application of certificate validation letter.',
     year: '2023',
-    tech: ['Vue.js', 'Typescript', 'Quasar UI', 'reCaptcha'],
+    tech: ['Laravel', 'Vue.js', 'Typescript', 'Quasar UI', 'reCaptcha'],
     url: 'https://eijazah.bisniskoe.com/',
-    image: createUrl('projects/e-ijazah.webp')
-  },
-  {
-    name: 'Ease Button UI',
-    description: 'A user-friendly and customizable button UI component for Vue.js, designed to simplify its usage for users.',
-    year: '2023',
-    tech: ['Vue.js', 'Typescript', 'Tailwind CSS', 'Netlify'],
-    download: {
-      github: 'https://github.com/zlnew/ease-button-ui',
-      npm: 'https://www.npmjs.com/package/ease-button-ui'
-    },
-    url: 'https://ease-button-ui.netlify.app/',
-    image: createUrl('projects/ease-button-ui.webp')
-  },
-  {
-    name: 'E-Commerce Website',
-    description: 'An Office Stationery E-Commerce website built using CodeIgniter and integrated with the Midtrans Payment Gateway.',
-    year: '2021',
-    tech: ['CodeIgniter', 'JQuery', 'Bootstrap', 'Midtrans API'],
-    download: {
-      github: 'https://github.com/ishamadway/toko-atk'
-    },
-    url: 'https://github.com/ishamadway/toko-atk',
-    image: createUrl('projects/toko-atk.webp')
+    image: createUrl('projects/e-ijazah.webp'),
+    overview: [
+      {
+        src: createUrl('projects/e_ijazah/search.webp'),
+        title: 'Search by ijazah number',
+        description: 'User can verify their ijazah by inputing ijazah number'
+      },
+      {
+        src: createUrl('projects/e_ijazah/identity.png'),
+        title: 'Student Identity',
+        description: 'If ijazah number is verified, the app will show the student identity.'
+      },
+      {
+        src: createUrl('projects/e_ijazah/validity_letter_form.png'),
+        title: 'Validity Letter Form',
+        description: 'User can also make a request for Ijazah Validity Letter by filling the Validity Letter Form.'
+      },
+      {
+        src: createUrl('projects/e_ijazah/admin_dashboard.png'),
+        title: 'Dashboard for admin',
+        description: 'Admins can access the dashboard to manage master data in the form of app settings, certificates of validity, ijazah, users and process applications for letters of validity.'
+      }
+    ]
   }
+  // {
+  //   name: 'Ease Button UI',
+  //   description: 'A user-friendly and customizable button UI component for Vue.js, designed to simplify its usage for users.',
+  //   year: '2023',
+  //   tech: ['Vue.js', 'Typescript', 'Tailwind CSS', 'Netlify'],
+  //   download: {
+  //     github: 'https://github.com/zlnew/ease-button-ui',
+  //     npm: 'https://www.npmjs.com/package/ease-button-ui'
+  //   },
+  //   url: 'https://ease-button-ui.netlify.app/',
+  //   image: createUrl('projects/ease-button-ui.webp')
+  // },
+  // {
+  //   name: 'E-Commerce Website',
+  //   description: 'An Office Stationery E-Commerce website built using CodeIgniter and integrated with the Midtrans Payment Gateway.',
+  //   year: '2021',
+  //   tech: ['CodeIgniter', 'JQuery', 'Bootstrap', 'Midtrans API'],
+  //   download: {
+  //     github: 'https://github.com/ishamadway/toko-atk'
+  //   },
+  //   url: 'https://github.com/ishamadway/toko-atk',
+  //   image: createUrl('projects/toko-atk.webp')
+  // }
 ]
 
 function createUrl (fileName: string) {

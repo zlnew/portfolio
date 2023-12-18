@@ -53,10 +53,10 @@ const experience: Experience[] = [
   {
     title: 'Full-Stack Developer',
     company: 'Freelance',
-    description: 'Involved with several projects as a full-stack developer. In this job I gained experience on how to communicate well with clients and improved my skills in using Laravel, Vue.js, Typescript, and MySQL.',
+    description: 'Involved with several projects as a full-stack developer. Gained experience on how to communicate well with clients and improved my skills in using Laravel, Vue.js, Typescript, and MySQL.',
     period: {
-      from: '2021',
-      to: 'Present'
+      from: 'Apr 2021',
+      to: 'Dec 2023'
     },
     location: 'Online',
     tech: ['Vue.js', 'Tailwind CSS', 'Quasar UI', 'Typescript', 'CodeIgniter', 'Laravel', 'MySQL'],
@@ -88,7 +88,7 @@ const experience: Experience[] = [
       to: 'Dec 2022'
     },
     location: 'On site',
-    tech: ['Bootstrap', 'JQuery', 'CodeIgniter', 'Midtrans API', 'MySQL'],
+    tech: ['Bootstrap', 'JQuery', 'CodeIgniter', 'Midtrans API', 'REST API', 'MySQL', 'Git', 'Agile Development'],
     url: 'https://beecons.co.id/'
   },
   {
@@ -100,7 +100,7 @@ const experience: Experience[] = [
       to: 'Dec 2023'
     },
     location: 'On site',
-    tech: ['Basic programming'],
+    tech: ['Basic programming', "Bachelor's degree in Computer Science"],
     url: 'https://bsi.ac.id/'
   }
 ]
@@ -192,29 +192,6 @@ const projects: Projects[] = [
       }
     ]
   }
-  // {
-  //   name: 'Ease Button UI',
-  //   description: 'A user-friendly and customizable button UI component for Vue.js, designed to simplify its usage for users.',
-  //   year: '2023',
-  //   tech: ['Vue.js', 'Typescript', 'Tailwind CSS', 'Netlify'],
-  //   download: {
-  //     github: 'https://github.com/zlnew/ease-button-ui',
-  //     npm: 'https://www.npmjs.com/package/ease-button-ui'
-  //   },
-  //   url: 'https://ease-button-ui.netlify.app/',
-  //   image: createUrl('projects/ease-button-ui.webp')
-  // },
-  // {
-  //   name: 'E-Commerce Website',
-  //   description: 'An Office Stationery E-Commerce website built using CodeIgniter and integrated with the Midtrans Payment Gateway.',
-  //   year: '2021',
-  //   tech: ['CodeIgniter', 'JQuery', 'Bootstrap', 'Midtrans API'],
-  //   download: {
-  //     github: 'https://github.com/ishamadway/toko-atk'
-  //   },
-  //   url: 'https://github.com/ishamadway/toko-atk',
-  //   image: createUrl('projects/toko-atk.webp')
-  // }
 ]
 
 function createUrl (fileName: string) {

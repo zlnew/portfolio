@@ -80,27 +80,27 @@ const experience: Experience[] = [
     ]
   },
   {
-    title: 'Front-End Developer Internship',
+    title: 'Full-Stack Developer Internship',
     company: 'Beecons',
-    description: 'Develop a marketplace website for Estimator.id in a team as a Front-End Developer. From this internship i was learned how to collaborate using git as a team and how to use and understands REST API.',
+    description: 'Contributed in marketplace website development for estimator.id in a team. Learned how to collaborate using git as a team and how to create and cosume REST API.',
     period: {
       from: 'Aug',
       to: 'Dec 2022'
     },
     location: 'On site',
     tech: ['Bootstrap', 'JQuery', 'CodeIgniter', 'Midtrans API', 'REST API', 'MySQL', 'Git', 'Agile Development'],
-    url: 'https://beecons.co.id/'
+    url: 'https://estimator.id/'
   },
   {
     title: 'Software Engineering',
     company: 'Bina Sarana Informatika University',
-    description: 'This is the first place where I learned and entered the world of programming. I had the opportunity to learn basic programming skills and graduated as a computer science bachelor.',
+    description: "Actively involved in the Student Association as the responsible person for the Publication and Documentation division for 1 year. Bachelor's degree in Computer Science, with 3.98 GPA.",
     period: {
       from: 'Aug 2019',
       to: 'Dec 2023'
     },
     location: 'On site',
-    tech: ['Basic programming', "Bachelor's degree in Computer Science"],
+    tech: ["Bachelor's degree in Computer Science"],
     url: 'https://bsi.ac.id/'
   }
 ]
@@ -108,9 +108,9 @@ const experience: Experience[] = [
 const projects: Projects[] = [
   {
     name: 'Personal Blog',
-    description: 'My personal blog, where I share coding tips, tutorials, and my thoughts. Built using Nuxt.js and Supabase.',
+    description: 'My personal blog, where I share coding tips, tutorials, and my thoughts.',
     year: '2023',
-    tech: ['Nuxt.js', 'Typescript', 'Tailwind CSS', 'Supabase'],
+    tech: ['Nuxt.js', 'Nuxt.UI', 'Typescript', 'Tailwind CSS', 'Supabase', 'OAuth', 'Netlify'],
     download: {
       github: 'https://github.com/zlnew/blog'
     },
@@ -164,7 +164,7 @@ const projects: Projects[] = [
   },
   {
     name: 'E-Ijazah App',
-    description: 'An app that seamlessly verifies Ijazah authenticity via QR codes and facilitates application of certificate validation letter.',
+    description: 'An app that can easily verifies Ijazah authenticity via QR codes and facilitates application of certificate validation letter.',
     year: '2023',
     tech: ['Laravel', 'Vue.js', 'Typescript', 'Quasar UI', 'reCaptcha'],
     url: 'https://eijazah.bisniskoe.com/',

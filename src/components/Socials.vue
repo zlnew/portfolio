@@ -11,7 +11,7 @@
     </a>
 
     <a
-      href="https://id.linkedin.com/in/maulana-aprizqy-sumaryanto-920a0b243"
+      href="https://id.linkedin.com/in/aprizqy"
       target="_blank"
       aria-label="LinkedIn"
       title="LinkedIn Profile"

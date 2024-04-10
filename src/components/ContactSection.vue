@@ -14,8 +14,8 @@ import SectionHeader from './SectionHeader.vue'
       <div class="flex flex-col justify-center gap-2">
         <div class="space-x-4">
           <span class="text-sm tracking-widest">E-Mail :</span>
-          <a href="mailto:aprizqy.work@gmail.com" target="_blank" class="link">
-            aprizqy.work@gmail.com
+          <a href="mailto:aprizqymaulana@gmail.com" target="_blank" class="link">
+            aprizqymaulana@gmail.com
           </a>
         </div>
 

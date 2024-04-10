@@ -40,16 +40,33 @@ interface Projects {
 
 const me: Me = {
   name: 'Maulana Aprizqy Sumaryanto',
-  title: 'Freelance Full-Stack Developer',
+  title: 'Web Developer',
   short_bio: 'I love transforming ideas into valuable websites.'
 }
 
 const about: About = [
-  "Graduated from <strong>Software Engineering at Bina Sarana Informatika University</strong>. I currently work as a Freelance Full-Stack Developer. Over time, I've had wonderful opportunities to contribute to a variety of freelance projects as a Full Stack Developer. Through my journey as a Freelance Full-Stack Developer, I have become well-versed in using technologies like <strong>Laravel, Vue.js, Typescript, and MySQL</strong>",
+  'Graduated from <strong>Software Engineering at Bina Sarana Informatika University</strong>. I currently work as a Full-Stack Developer at PT Teknologi Perdagangan Lilasia. Through my journey as a Full-Stack Developer, I have become well-versed in using technologies like <strong>Laravel, Vue.js, Typescript, and MySQL</strong>',
   "In my free time, I enjoy dedicating my time to building <a href='https://github.com/zlnew/vibes-in-spotify' target='_blank' class='link'>open-source projects</a> or write an article on my <a href='https://aprizqy.com/' target='_blank' class='link'>personal blog</a>. I find great satisfaction in being able to share my projects with others and contribute to helping people through my websites."
 ]
 
 const experience: Experience[] = [
+  {
+    title: 'Full-Stack Developer',
+    company: 'PT Teknologi Perdagangan Lilasia',
+    description: 'Collaborating in developing the Lilasia.id marketplace website as a fullstack developer, utilizing Gitlab, Laravel, PostgreSQL, and Vue.js technologies.',
+    period: {
+      from: 'Jan 2024',
+      to: 'Present'
+    },
+    location: 'Remote',
+    tech: ['Vue.js', 'Typescript', 'Laravel', 'PostgreSQL', 'Gitlab'],
+    projects: [
+      {
+        name: 'Lilasia.id',
+        url: 'https://lilasia.id'
+      }
+    ]
+  },
   {
     title: 'Full-Stack Developer',
     company: 'Freelance',

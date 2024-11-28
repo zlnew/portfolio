@@ -56,7 +56,7 @@ const experience: Experience[] = [
     description:
       'Developed the Lilasia.id marketplace with Laravel, PostgreSQL, and Vue.js, created a custom Vue.js UI library, and built a company blog on WordPress.',
     period: {
-      from: 'Jan 2024',
+      from: 'Jan',
       to: 'Nov 2024'
     },
     location: 'Remote',
@@ -77,7 +77,7 @@ const experience: Experience[] = [
     ]
   },
   {
-    title: 'Full-Stack Developer Internship',
+    title: 'Full-Stack Developer Intern',
     company: 'Beecons',
     description:
       'Contributed in marketplace website development for estimator.id in a team. Learned how to collaborate using git as a team and how to create and cosume REST API.',

@@ -45,7 +45,7 @@ const me: Me = {
 }
 
 const about: About = [
-  'Graduated from <strong>Software Engineering at Bina Sarana Informatika University</strong>. I currently work as a Full-Stack Developer at PT Teknologi Perdagangan Lilasia. Through my journey as a Full-Stack Developer, I have become well-versed in using technologies like <strong>Laravel, Vue.js, Typescript, and MySQL</strong>',
+  'Graduated from <strong>Software Engineering at Bina Sarana Informatika University</strong>. Previously developed a <strong>marketplace website</strong> as a Full-Stack Developer at PT Teknologi Perdagangan Lilasia, with additional freelance experience at STMIK Mercusuar. Through my journey as a Full-Stack Developer, I have become well-versed in using technologies like <strong>Laravel, Vue.js, Typescript, and MySQL</strong>',
   "In my free time, I enjoy dedicating my time to building <a href='https://github.com/zlnew/vibes-in-spotify' target='_blank' class='link'>open-source projects</a> or write an article on my <a href='https://aprizqy.com/' target='_blank' class='link'>personal blog</a>. I find great satisfaction in being able to share my projects with others and contribute to helping people through my websites."
 ]
 
@@ -54,47 +54,25 @@ const experience: Experience[] = [
     title: 'Full-Stack Developer',
     company: 'PT Teknologi Perdagangan Lilasia',
     description:
-      'Collaborating in developing the Lilasia.id marketplace website as a fullstack developer, utilizing Gitlab, Laravel, PostgreSQL, and Vue.js technologies.',
+      'Developed the Lilasia.id marketplace with Laravel, PostgreSQL, and Vue.js, created a custom Vue.js UI library, and built a company blog on WordPress.',
     period: {
       from: 'Jan 2024',
-      to: 'Present'
+      to: 'Nov 2024'
     },
     location: 'Remote',
-    tech: ['Vue.js', 'Typescript', 'Laravel', 'PostgreSQL', 'Gitlab'],
+    tech: ['Vue.js', 'Typescript', 'Laravel', 'PostgreSQL', 'Git'],
     projects: [
       {
         name: 'Lilasia.id',
         url: 'https://lilasia.id'
-      }
-    ]
-  },
-  {
-    title: 'Full-Stack Developer',
-    company: 'Freelance',
-    description:
-      'Involved with several projects as a full-stack developer. Gained experience on how to communicate well with clients and improved my skills in using Laravel, Vue.js, Typescript, and MySQL.',
-    period: {
-      from: 'Apr 2021',
-      to: 'Dec 2023'
-    },
-    location: 'Online',
-    tech: ['Vue.js', 'Tailwind CSS', 'Quasar UI', 'Typescript', 'CodeIgniter', 'Laravel', 'MySQL'],
-    projects: [
-      {
-        name: 'E-Student Card',
-        url: 'https://ektm.mercusuar.ac.id/login'
       },
       {
-        name: 'Student Financial App',
-        url: 'https://sikeu.mercusuar.ac.id/'
+        name: 'Lilasia Blog',
+        url: 'https://blog.lilasia.id'
       },
       {
-        name: 'New Student Admission',
-        url: 'https://admisi.mercusuar.ac.id/'
-      },
-      {
-        name: 'Project Management App',
-        url: 'https://laras.bisniskoe.com/'
+        name: 'lilasia UI',
+        url: 'https://ui.dev.lilasia.id'
       }
     ]
   },
@@ -121,10 +99,40 @@ const experience: Experience[] = [
     url: 'https://estimator.id/'
   },
   {
+    title: 'Full-Stack Developer Freelance',
+    company: 'STMIK Mercusuar',
+    description:
+      'Involved with several projects as a full-stack developer. Gained experience on how to communicate well with clients and improved my skills in using Laravel, Vue.js, Typescript, and MySQL.',
+    period: {
+      from: 'Apr 2021',
+      to: 'Jul 2022'
+    },
+    location: 'Online',
+    tech: ['Vue.js', 'Tailwind CSS', 'Quasar UI', 'Typescript', 'CodeIgniter', 'Laravel', 'MySQL'],
+    projects: [
+      {
+        name: 'E-Student Card',
+        url: 'https://ektm.mercusuar.ac.id/login'
+      },
+      {
+        name: 'Student Financial App',
+        url: 'https://sikeu.mercusuar.ac.id/'
+      },
+      {
+        name: 'New Student Admission',
+        url: 'https://admisi.mercusuar.ac.id/'
+      },
+      {
+        name: 'Project Management App',
+        url: 'https://laras.bisniskoe.com/'
+      }
+    ]
+  },
+  {
     title: 'Software Engineering',
     company: 'Bina Sarana Informatika University',
     description:
-      "Actively involved in the Student Association as the responsible person for the Publication and Documentation division for 1 year. Bachelor's degree in Computer Science, with 3.97 GPA.",
+      "Actively involved in the Student Association as the responsible person for the Publication and Documentation division for 1 year. Bachelor's degree in Computer Science, with 3.98 GPA.",
     period: {
       from: 'Aug 2019',
       to: 'Dec 2023'

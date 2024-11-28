@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
-import Socials from './Socials.vue'
-import Badge from './Badge.vue'
 import { me } from '@/resources'
+import { onMounted, onUnmounted, ref } from 'vue'
+import Badge from './Badge.vue'
+import Socials from './Socials.vue'
 
 const navigation = ['about', 'experience', 'projects']
 const activeContentId = ref<any>('about')
@@ -38,17 +38,19 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 space-y-4">
+  <header
+    class="space-y-4 lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
+  >
     <div class="mb-8 lg:mb-0">
       <h1 class="mb-2 text-4xl">
         {{ me.name }}
       </h1>
 
-      <h2 class="transition text-light mb-6 tracking-widest hover:text-accent">
+      <h2 class="mb-6 tracking-widest text-light transition hover:text-accent">
         {{ me.title }}
       </h2>
 
-      <p class="text-light mb-6 max-w-sm">
+      <p class="mb-6 max-w-sm text-light">
         {{ me.short_bio }}
       </p>
 
@@ -61,7 +63,10 @@ onMounted(() => {
         >
           <Badge size="lg">
             Resume
-            <fa-icon icon="fa-solid fa-download" size="sm" />
+            <fa-icon
+              icon="fa-solid fa-download"
+              size="sm"
+            />
           </Badge>
         </a>
         <a
@@ -72,21 +77,27 @@ onMounted(() => {
         >
           <Badge size="lg">
             Blog
-            <fa-icon icon="fa-solid fa-arrow-up-right-from-square" size="sm" />
+            <fa-icon
+              icon="fa-solid fa-arrow-up-right-from-square"
+              size="sm"
+            />
           </Badge>
         </a>
       </div>
 
       <nav class="hidden lg:block lg:py-12">
         <ul class="space-y-6">
-          <li v-for="nav in navigation" :key="nav">
+          <li
+            v-for="nav in navigation"
+            :key="nav"
+          >
             <a
               :href="`#${nav}`"
               :class="{
-                'font-bold border-l-2 border-accent pl-2': activeContentId === `${nav}`,
+                'border-l-2 border-accent pl-2 font-bold': activeContentId === `${nav}`,
                 'font-medium opacity-60 hover:opacity-100': activeContentId !== `${nav}`
               }"
-              class="transition font-serif uppercase hover:no-underline"
+              class="font-serif uppercase transition hover:no-underline"
             >
               {{ nav }}
             </a>

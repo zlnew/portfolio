@@ -2,8 +2,8 @@
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
 import SectionSubheader from './SectionSubheader.vue'
 
 const swiperModules = [Pagination]
@@ -11,39 +11,46 @@ const swiperModules = [Pagination]
 defineEmits(['close'])
 
 defineProps<{
-  title: string
   description: string
+  overview:
+    | Array<{
+        description: string
+        src: string
+        title: string
+      }>
+    | undefined
+  title: string
   url: string | undefined
-  overview: Array<{
-    src: string
-    title: string
-    description: string
-  }> | undefined
 }>()
 </script>
 
 <template>
-  <div class="p-4 flex justify-between items-center gap-8">
+  <div class="flex items-center justify-between gap-8 p-4">
     <h2 class="text-xl">{{ title }}</h2>
     <span
-      class="cursor-pointer float-right font-bold text-3xl hover:text-accent"
+      class="float-right cursor-pointer text-3xl font-bold hover:text-accent"
       @click="$emit('close')"
     >
       &times;
     </span>
   </div>
 
-  <div class="p-4 max-w-lg space-y-6">
+  <div class="max-w-lg space-y-6 p-4">
     <div class="space-y-2">
       <p>{{ description }}</p>
       <div v-if="url">
-        <a :href="url" target="_blank" rel="noopener noreferrer" class="link">
+        <a
+          :href="url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link"
+        >
           Visit site
         </a>
       </div>
     </div>
 
-    <hr class="border-accent/30">
+    <hr class="border-accent/30" />
 
     <Swiper
       v-if="overview"
@@ -56,20 +63,23 @@ defineProps<{
       }"
       :auto-height="true"
     >
-      <SwiperSlide v-for="item in overview" :key="item.title">
-        <div class="flex flex-col gap-4 mb-14">
+      <SwiperSlide
+        v-for="item in overview"
+        :key="item.title"
+      >
+        <div class="mb-14 flex flex-col gap-4">
           <img
             :src="item.src"
             :alt="item.description"
             width="500"
             height="300"
             class="rounded-lg"
-          >
+          />
 
-          <div class="text-start space-y-3">
+          <div class="space-y-3 text-start">
             <SectionSubheader :text="item.title" />
 
-            <p class="text-light text-sm md:text-base">
+            <p class="text-sm text-light md:text-base">
               {{ item.description }}
             </p>
           </div>

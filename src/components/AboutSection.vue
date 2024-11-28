@@ -4,10 +4,13 @@ import SectionHeader from './SectionHeader.vue'
 </script>
 
 <template>
-  <section id="about" class="space-y-8">
+  <section
+    id="about"
+    class="space-y-8"
+  >
     <SectionHeader id="about">About</SectionHeader>
 
-    <div class="text-light space-y-4">
+    <div class="space-y-4 text-light">
       <p
         v-for="text in about"
         :key="text"

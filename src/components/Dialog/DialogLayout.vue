@@ -8,10 +8,12 @@ const dialog = useDialogStore()
   <Transition>
     <div
       v-if="dialog.state.component"
-      class="z-10 fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black/80"
+      class="fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-black/80"
       @click.self="dialog.close"
     >
-      <div class="z-20 max-w-xs sm:max-w-md md:max-w-2xl bg-primary text-white rounded-lg shadow-lg shadow-accent/30">
+      <div
+        class="z-20 max-w-xs rounded-lg bg-primary text-white shadow-lg shadow-accent/30 sm:max-w-md md:max-w-2xl"
+      >
         <Component
           :is="dialog.state.component"
           v-bind="dialog.state.componentProps"

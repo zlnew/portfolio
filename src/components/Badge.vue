@@ -2,7 +2,8 @@
 withDefaults(
   defineProps<{
     size?: 'md' | 'lg'
-  }>(), {
+  }>(),
+  {
     size: 'md'
   }
 )
@@ -14,7 +15,7 @@ withDefaults(
       'px-1 text-sm': size === 'md',
       'px-2 py-1 text-base': size === 'lg'
     }"
-    class="transition font-medium tracking-wider rounded-sm bg-emerald-900 hover:bg-accent hover:text-primary hover:shadow-md hover:shadow-accent/30"
+    class="rounded-sm bg-emerald-900 font-medium tracking-wider transition hover:bg-accent hover:text-primary hover:shadow-md hover:shadow-accent/30"
   >
     <slot />
   </span>

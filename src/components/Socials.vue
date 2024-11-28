@@ -7,7 +7,10 @@
       title="Github Profile"
       class="transition hover:text-accent"
     >
-      <fa-icon icon="fa-brands fa-github" size="xl" />
+      <fa-icon
+        icon="fa-brands fa-github"
+        size="xl"
+      />
     </a>
 
     <a
@@ -17,7 +20,10 @@
       title="LinkedIn Profile"
       class="transition hover:text-accent"
     >
-      <fa-icon icon="fa-brands fa-linkedin" size="xl" />
+      <fa-icon
+        icon="fa-brands fa-linkedin"
+        size="xl"
+      />
     </a>
 
     <a
@@ -27,7 +33,10 @@
       title="Intagram Profile"
       class="transition hover:text-accent"
     >
-      <fa-icon icon="fa-brands fa-instagram" size="xl" />
+      <fa-icon
+        icon="fa-brands fa-instagram"
+        size="xl"
+      />
     </a>
   </div>
 </template>

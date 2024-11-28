@@ -26,3 +26,8 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+.neoconfig.json
+
+.vite
+*.tsbuildinfo
+.env

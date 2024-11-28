@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, type Component, markRaw } from 'vue'
+import { markRaw, ref, type Component } from 'vue'
 
 interface ModalState {
   component: Component | null
@@ -14,16 +14,16 @@ export const useDialogStore = defineStore('dialog', () => {
 
   const state = ref<ModalState>({ ...initialState })
 
-  function open ({ component, componentProps }: ModalState) {
+  function open({ component, componentProps }: ModalState) {
     const newState = {
-      component: (component != null) ? markRaw(component) : component,
+      component: component != null ? markRaw(component) : component,
       componentProps
     }
 
     Object.assign(state.value, newState)
   }
 
-  function close () {
+  function close() {
     Object.assign(state.value, initialState)
   }
 

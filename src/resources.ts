@@ -32,9 +32,9 @@ interface Projects {
   }
   image?: string
   overview?: Array<{
+    description: string
     src: string
     title: string
-    description: string
   }>
 }
 
@@ -53,7 +53,8 @@ const experience: Experience[] = [
   {
     title: 'Full-Stack Developer',
     company: 'PT Teknologi Perdagangan Lilasia',
-    description: 'Collaborating in developing the Lilasia.id marketplace website as a fullstack developer, utilizing Gitlab, Laravel, PostgreSQL, and Vue.js technologies.',
+    description:
+      'Collaborating in developing the Lilasia.id marketplace website as a fullstack developer, utilizing Gitlab, Laravel, PostgreSQL, and Vue.js technologies.',
     period: {
       from: 'Jan 2024',
       to: 'Present'
@@ -70,7 +71,8 @@ const experience: Experience[] = [
   {
     title: 'Full-Stack Developer',
     company: 'Freelance',
-    description: 'Involved with several projects as a full-stack developer. Gained experience on how to communicate well with clients and improved my skills in using Laravel, Vue.js, Typescript, and MySQL.',
+    description:
+      'Involved with several projects as a full-stack developer. Gained experience on how to communicate well with clients and improved my skills in using Laravel, Vue.js, Typescript, and MySQL.',
     period: {
       from: 'Apr 2021',
       to: 'Dec 2023'
@@ -99,19 +101,30 @@ const experience: Experience[] = [
   {
     title: 'Full-Stack Developer Internship',
     company: 'Beecons',
-    description: 'Contributed in marketplace website development for estimator.id in a team. Learned how to collaborate using git as a team and how to create and cosume REST API.',
+    description:
+      'Contributed in marketplace website development for estimator.id in a team. Learned how to collaborate using git as a team and how to create and cosume REST API.',
     period: {
       from: 'Aug',
       to: 'Dec 2022'
     },
     location: 'On site',
-    tech: ['Bootstrap', 'JQuery', 'CodeIgniter', 'Midtrans API', 'REST API', 'MySQL', 'Git', 'Agile Development'],
+    tech: [
+      'Bootstrap',
+      'JQuery',
+      'CodeIgniter',
+      'Midtrans API',
+      'REST API',
+      'MySQL',
+      'Git',
+      'Agile Development'
+    ],
     url: 'https://estimator.id/'
   },
   {
     title: 'Software Engineering',
     company: 'Bina Sarana Informatika University',
-    description: "Actively involved in the Student Association as the responsible person for the Publication and Documentation division for 1 year. Bachelor's degree in Computer Science, with 3.97 GPA.",
+    description:
+      "Actively involved in the Student Association as the responsible person for the Publication and Documentation division for 1 year. Bachelor's degree in Computer Science, with 3.97 GPA.",
     period: {
       from: 'Aug 2019',
       to: 'Dec 2023'
@@ -137,28 +150,33 @@ const projects: Projects[] = [
       {
         src: createUrl('projects/personal_blog/home.webp'),
         title: 'Home',
-        description: 'This is the interface of the blog home page. This page shows the latest articles of the blog.'
+        description:
+          'This is the interface of the blog home page. This page shows the latest articles of the blog.'
       },
       {
         src: createUrl('projects/personal_blog/browse.png'),
         title: 'Browse',
-        description: 'This is the interface for browsing articles. You can search and filter articles based on order and tags.'
+        description:
+          'This is the interface for browsing articles. You can search and filter articles based on order and tags.'
       },
       {
         src: createUrl('projects/personal_blog/dashboard.png'),
         title: 'Dashboard for writer',
-        description: 'Dashboard can be accessed if the user is logged in. The default dashboard page shows all the articles created by the writer.'
+        description:
+          'Dashboard can be accessed if the user is logged in. The default dashboard page shows all the articles created by the writer.'
       },
       {
         src: createUrl('projects/personal_blog/editor.png'),
         title: 'Article Editor',
-        description: 'Writer can create and edit their articles, this blog uses Tiptap editor for content editing.'
+        description:
+          'Writer can create and edit their articles, this blog uses Tiptap editor for content editing.'
       }
     ]
   },
   {
     name: 'Spotify Music Discovery App',
-    description: 'A Music Discovery Web App Powered by the Spotify Web API that recommends various tracks generated based on user-selected vibes.',
+    description:
+      'A Music Discovery Web App Powered by the Spotify Web API that recommends various tracks generated based on user-selected vibes.',
     year: '2023',
     tech: ['Vue.js', 'Typescript', 'Tailwind CSS', 'Spotify Web API', 'Netlify'],
     download: {
@@ -170,18 +188,21 @@ const projects: Projects[] = [
       {
         src: createUrl('projects/vibes_in/vibe_selector.png'),
         title: 'Choose Vibe',
-        description: 'Users can choose a Vibe. The vibes are Energetic, Melancholic, Relaxing, Upbeat, Uplifting, Love, and Thoughtful'
+        description:
+          'Users can choose a Vibe. The vibes are Energetic, Melancholic, Relaxing, Upbeat, Uplifting, Love, and Thoughtful'
       },
       {
         src: createUrl('projects/vibes_in/music_recommendation.webp'),
         title: 'Song Recommendations',
-        description: 'This app will generate 20 songs based on user-selected vibes, all songs can be saved as a playlist.'
+        description:
+          'This app will generate 20 songs based on user-selected vibes, all songs can be saved as a playlist.'
       }
     ]
   },
   {
     name: 'E-Ijazah App',
-    description: 'An app that can easily verifies Ijazah authenticity via QR codes and facilitates application of certificate validation letter.',
+    description:
+      'An app that can easily verifies Ijazah authenticity via QR codes and facilitates application of certificate validation letter.',
     year: '2023',
     tech: ['Laravel', 'Vue.js', 'Typescript', 'Quasar UI', 'reCaptcha'],
     url: 'https://eijazah.bisniskoe.com/',
@@ -200,25 +221,22 @@ const projects: Projects[] = [
       {
         src: createUrl('projects/e_ijazah/validity_letter_form.png'),
         title: 'Validity Letter Form',
-        description: 'User can also make a request for Ijazah Validity Letter by filling the Validity Letter Form.'
+        description:
+          'User can also make a request for Ijazah Validity Letter by filling the Validity Letter Form.'
       },
       {
         src: createUrl('projects/e_ijazah/admin_dashboard.png'),
         title: 'Dashboard for admin',
-        description: 'Admins can access the dashboard to manage master data in the form of app settings, certificates of validity, ijazah, users and process applications for letters of validity.'
+        description:
+          'Admins can access the dashboard to manage master data in the form of app settings, certificates of validity, ijazah, users and process applications for letters of validity.'
       }
     ]
   }
 ]
 
-function createUrl (fileName: string) {
+function createUrl(fileName: string) {
   const basePath = '/'
   return new URL(basePath + fileName, import.meta.url).href
 }
 
-export {
-  me,
-  about,
-  experience,
-  projects
-}
+export { about, experience, me, projects }

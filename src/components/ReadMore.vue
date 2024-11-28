@@ -14,7 +14,7 @@ const readMoreStatus = ref(false)
       <a
         v-if="!readMoreStatus"
         href="javascript:void(0)"
-        class="text-xs md:text-sm link"
+        class="link text-xs md:text-sm"
         @click="readMoreStatus = true"
       >
         Read More
@@ -22,7 +22,7 @@ const readMoreStatus = ref(false)
       <a
         v-if="readMoreStatus"
         href="javascript:void(0)"
-        class="text-xs md:text-sm link"
+        class="link text-xs md:text-sm"
         @click="readMoreStatus = false"
       >
         Read Less

@@ -5,13 +5,20 @@ defineProps<{
 </script>
 
 <template>
-  <a v-if="id" :href="`#${id}`" class="hover:no-underline">
-    <h3 class="w-fit pl-2 uppercase border-l-2 border-accent">
+  <a
+    v-if="id"
+    :href="`#${id}`"
+    class="hover:no-underline"
+  >
+    <h3 class="w-fit border-l-2 border-accent pl-2 uppercase">
       <slot />
     </h3>
   </a>
 
-  <h3 v-else class="w-fit pl-2 uppercase border-l-2 border-accent">
+  <h3
+    v-else
+    class="w-fit border-l-2 border-accent pl-2 uppercase"
+  >
     <slot />
   </h3>
 </template>

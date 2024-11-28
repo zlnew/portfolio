@@ -10,7 +10,12 @@ const hovered = ref(false)
 </script>
 
 <template>
-  <a v-if="url" :href="url" target="_blank" class="w-fit flex items-center gap-2">
+  <a
+    v-if="url"
+    :href="url"
+    target="_blank"
+    class="flex w-fit items-center gap-2"
+  >
     <h4
       @mouseover="hovered = true"
       @mouseleave="hovered = false"

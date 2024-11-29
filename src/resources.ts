@@ -134,8 +134,8 @@ const experience: Experience[] = [
     description:
       "Actively involved in the Student Association as the responsible person for the Publication and Documentation division for 1 year. Bachelor's degree in Computer Science, with 3.97 GPA.",
     period: {
-      from: 'Aug 2019',
-      to: 'Dec 2023'
+      from: 'Sep 2019',
+      to: 'Aug 2023'
     },
     location: 'On site',
     tech: ["Bachelor's degree in Computer Science"],

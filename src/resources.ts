@@ -111,20 +111,24 @@ const experience: Experience[] = [
     tech: ['Vue.js', 'Tailwind CSS', 'Quasar UI', 'Typescript', 'CodeIgniter', 'Laravel', 'MySQL'],
     projects: [
       {
-        name: 'E-Student Card',
-        url: 'https://ektm.mercusuar.ac.id/login'
+        name: 'SIAKRIPSI',
+        url: 'https://siakripsi.mercusuar.ac.id'
       },
       {
-        name: 'Student Financial App',
+        name: 'SIKEU',
         url: 'https://sikeu.mercusuar.ac.id/'
       },
       {
-        name: 'New Student Admission',
+        name: 'E-KTM',
+        url: 'https://ektm.mercusuar.ac.id/login'
+      },
+      {
+        name: 'Admisi',
         url: 'https://admisi.mercusuar.ac.id/'
       },
       {
-        name: 'Project Management App',
-        url: 'https://laras.bisniskoe.com/'
+        name: 'Transkrip',
+        url: 'https://transkrip.mercusuar.ac.id/'
       }
     ]
   },
